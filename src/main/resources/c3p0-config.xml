@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <!--默认配置-->
+    <default-config>
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/imooc?serverTimezone = GMT</property>
+        <property name="user">root</property>
+        <property name="password">1234</property>
+        <!--    初始化连接池数量-->
+        <property name="initialPoolSize">10</property>
+        <!--    最大生存时间-->
+        <property name="maxIdleTime">60</property>
+        <!--    最大&最小连接池数量-->
+        <property name="maxPoolSize">200</property>
+        <property name="minPoolSize">10</property>
+        <!--    最大Statements数量-->
+        <property name="maxStatements">400</property>
+    </default-config>
+
+    <!--配置连接池mysql-->
+    <!--    配置名称, 在建立连接池时以名称来选择相应的配置-->
+    <named-config name="mysql">
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/employee?serverTimezone = GMT</property>
+        <property name="user">root</property>
+        <property name="password">1234</property>
+        <!--    下头的配置与上头相同-->
+        <property name="initialPoolSize">10</property>
+        <property name="maxIdleTime">30</property>
+        <property name="maxPoolSize">100</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxStatements">200</property>
+    </named-config>
+
+    <!--配置连接池commodity-->
+    <named-config name="commodity">
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/commodity?serverTimezone = GMT</property>
+        <property name="user">root</property>
+        <property name="password">1234</property>
+        <!--    下头的配置与上头相同-->
+        <property name="initialPoolSize">10</property>
+        <property name="maxIdleTime">30</property>
+        <property name="maxPoolSize">100</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxStatements">200</property>
+    </named-config>
+    <!--配置连接池3-->
+    <named-config name="imooc">
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/imooc?serverTimezone = GMT</property>
+        <property name="user">root</property>
+        <property name="password">1234</property>
+        <!--    下头的配置与上头相同-->
+        <property name="initialPoolSize">10</property>
+        <property name="maxIdleTime">60</property>
+        <property name="maxPoolSize">200</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxStatements">400</property>
+    </named-config>
+    <!--配置连接池4-->
+    ......
+</c3p0-config>
